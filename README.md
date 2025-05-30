@@ -81,7 +81,7 @@
                    'smtp_host'   => 'smtp-relay.brevo.com',
                    'smtp_port'   => 587,
                    'smtp_user'   => '8e4e07001@smtp-brevo.com',
-                   'smtp_pass'   => 'TNAhb8rPkxKEny2V',
+                   'smtp_pass'   => '',
                    'smtp_crypto' => 'tls',
                    'mailtype'    => 'html',
                    'charset'     => 'utf-8',
@@ -133,11 +133,17 @@
                 ";
 
         $this->email->message($mensagem);
-![image](https://github.com/user-attachments/assets/ba4abe85-c76c-498e-ae4d-2654cb25fe05)
+![image](https://github.com/user-attachments/assets/5baf0600-f57d-4b81-a348-724291edef4d)
+
 
 ## •⁠Crie um webhook que receberá o ID e o status do Pedido. Caso o status seja cancelado, remova o pedido. Caso o status seja outro, atualize o status em seu pedido.
 
-![image](https://github.com/user-attachments/assets/f7c19e0d-3585-459b-b4f1-f134e26edbc8)
+![image](https://github.com/user-attachments/assets/f4e6824b-9e36-4c5f-bf4e-01792d7d576b)
+![image](https://github.com/user-attachments/assets/897eadb9-9210-42d9-9751-fb480c8f39b4)
+![image](https://github.com/user-attachments/assets/5d1e6ffc-8d2a-4f64-bbd8-9e3d201778d9)
+
+
+
 
 ---
 
