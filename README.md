@@ -65,11 +65,15 @@
                     $('#finalEndereco').val(enderecoTexto);
                 });
         </script>
-![image](https://github.com/user-attachments/assets/0636b549-d14b-47a9-b9b9-684d9555bcc3)
+![image](https://github.com/user-attachments/assets/651a9227-8276-461c-8f70-f58083b73305)
+
 
 ## • ⁠Crie cupons que podem ser gerenciados por uma tela ou migração. Os cupons devem ter validade e regras de valores mínimos baseadas no subtotal do carrinho.
-![image](https://github.com/user-attachments/assets/fd0d3ac0-5902-4737-bd23-8dafadb41a84)
+![image](https://github.com/user-attachments/assets/fc1a0623-4af8-45bb-a9ec-679e18bf6e89)
+
 ![image](https://github.com/user-attachments/assets/50e3167a-24dc-4738-87ca-354fd3978cbc)
+![image](https://github.com/user-attachments/assets/3efc40fc-ebea-44ee-af35-5dcb19b1a11b)
+
 
 ## • ⁠Adicione um script de envio de e-mail ao finalizar o pedido, com o endereço preenchido pelo cliente.
         $config = [
