@@ -211,8 +211,8 @@
   ![image](https://github.com/user-attachments/assets/e488d171-3129-494a-abb7-4874d7eef583)
 
 ## • Acesse como admin 
- E-mail: admin@admin.com
- Senha:  admin
+         E-mail: admin@admin.com
+         Senha:  admin
 
  ![image](https://github.com/user-attachments/assets/94236a16-1529-4ded-aa1c-83ca4ef9ea16)
 
