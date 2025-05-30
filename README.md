@@ -52,71 +52,71 @@
 3. Crie o banco de dados no `phpMyAdmin` com o nome:montink
 4. ![image](https://github.com/user-attachments/assets/82ab39cb-12ce-421a-86a9-96bbbf8b5cfb)
 
-    ` CREATE TABLE `cupons` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `codigo` varchar(50) NOT NULL UNIQUE,
-      `valor` decimal(10,2) NOT NULL,
-      `validade` date NOT NULL,
-      `minimo` decimal(10,2) NOT NULL,
-      `created_at` datetime DEFAULT current_timestamp(),
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    
-    CREATE TABLE `produtos` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `nome` varchar(100) NOT NULL,
-      `preco` decimal(10,2) NOT NULL,
-      `created_at` datetime DEFAULT current_timestamp(),
-      `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-      `foto` varchar(255),
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    
-    CREATE TABLE `estoque` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `produto_id` int(11) NOT NULL,
-      `variacao` varchar(100),
-      `quantidade` int(11) DEFAULT 0,
-      PRIMARY KEY (`id`),
-      KEY (`produto_id`),
-      CONSTRAINT `fk_estoque_produto` FOREIGN KEY (`produto_id`) REFERENCES `produtos` (`id`) ON DELETE CASCADE
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    
-    CREATE TABLE `usuarios` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `nome` varchar(100),
-      `email` varchar(100) UNIQUE,
-      `senha` varchar(255),
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    
-    CREATE TABLE `pedidos` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `nome` varchar(255) NOT NULL,
-      `email` varchar(255) NOT NULL,
-      `cep` varchar(20) NOT NULL,
-      `endereco` text NOT NULL,
-      `subtotal` decimal(10,2) NOT NULL,
-      `frete` decimal(10,2) NOT NULL,
-      `desconto` decimal(10,2) NOT NULL DEFAULT 0.00,
-      `total` decimal(10,2) NOT NULL,
-      `status` varchar(50) NOT NULL DEFAULT 'pendente',
-      `data_criacao` datetime NOT NULL,
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    
-    CREATE TABLE `itens_pedido` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `pedido_id` int(11) NOT NULL,
-      `produto_id` int(11),
-      `nome_produto` varchar(255) NOT NULL,
-      `preco_unitario` decimal(10,2) NOT NULL,
-      `quantidade` int(11) NOT NULL,
-      `subtotal` decimal(10,2) NOT NULL,
-      PRIMARY KEY (`id`),
-      KEY (`pedido_id`),
-      CONSTRAINT `fk_itens_pedido_pedido` FOREIGN KEY (`pedido_id`) REFERENCES `pedidos` (`id`) ON DELETE CASCADE
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; ` 
+       CREATE TABLE `cupons` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `codigo` varchar(50) NOT NULL UNIQUE,
+          `valor` decimal(10,2) NOT NULL,
+          `validade` date NOT NULL,
+          `minimo` decimal(10,2) NOT NULL,
+          `created_at` datetime DEFAULT current_timestamp(),
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+        
+        CREATE TABLE `produtos` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `nome` varchar(100) NOT NULL,
+          `preco` decimal(10,2) NOT NULL,
+          `created_at` datetime DEFAULT current_timestamp(),
+          `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+          `foto` varchar(255),
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+        
+        CREATE TABLE `estoque` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `produto_id` int(11) NOT NULL,
+          `variacao` varchar(100),
+          `quantidade` int(11) DEFAULT 0,
+          PRIMARY KEY (`id`),
+          KEY (`produto_id`),
+          CONSTRAINT `fk_estoque_produto` FOREIGN KEY (`produto_id`) REFERENCES `produtos` (`id`) ON DELETE CASCADE
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+        
+        CREATE TABLE `usuarios` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `nome` varchar(100),
+          `email` varchar(100) UNIQUE,
+          `senha` varchar(255),
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+        
+        CREATE TABLE `pedidos` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `nome` varchar(255) NOT NULL,
+          `email` varchar(255) NOT NULL,
+          `cep` varchar(20) NOT NULL,
+          `endereco` text NOT NULL,
+          `subtotal` decimal(10,2) NOT NULL,
+          `frete` decimal(10,2) NOT NULL,
+          `desconto` decimal(10,2) NOT NULL DEFAULT 0.00,
+          `total` decimal(10,2) NOT NULL,
+          `status` varchar(50) NOT NULL DEFAULT 'pendente',
+          `data_criacao` datetime NOT NULL,
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+        
+        CREATE TABLE `itens_pedido` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `pedido_id` int(11) NOT NULL,
+          `produto_id` int(11),
+          `nome_produto` varchar(255) NOT NULL,
+          `preco_unitario` decimal(10,2) NOT NULL,
+          `quantidade` int(11) NOT NULL,
+          `subtotal` decimal(10,2) NOT NULL,
+          PRIMARY KEY (`id`),
+          KEY (`pedido_id`),
+          CONSTRAINT `fk_itens_pedido_pedido` FOREIGN KEY (`pedido_id`) REFERENCES `pedidos` (`id`) ON DELETE CASCADE
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; ` 
 
 
        
