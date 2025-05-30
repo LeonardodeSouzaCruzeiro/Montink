@@ -29,7 +29,7 @@
 
 ## • Com o produto salvo, adicione na mesma tela um botão de Comprar. Ao clicar nesse botão, gerencie um carrinho em sessão, controlando o estoque e valores do pedido. Caso o subtotal do pedido tenha entre R$52,00 e R$166,59, o frete do pedido deve ser R$15,00. Caso o subtotal seja maior que R$200,00, frete grátis. Para outros valores, o frete deve custar R$20,00.
 
-![image](https://github.com/user-attachments/assets/ebd4b266-2889-452e-bab8-11af89d38a60)
+![image](https://github.com/user-attachments/assets/c3fcdf17-b715-4998-9f17-af48a5d23966)![image](https://github.com/user-attachments/assets/74946639-313a-4cc9-b08b-f1af5842983c)
 ![image](https://github.com/user-attachments/assets/75e38bb8-5a17-46f2-8871-52b2e6664a11)
 
 ## • Adicione uma verificação de CEP, utilizando o https://viacep.com.br/
