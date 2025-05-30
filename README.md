@@ -151,8 +151,8 @@
 
 1. Instale o [XAMPP](https://www.apachefriends.org/pt_br/index.html).
 2. Copie o projeto para: C:\xampp8\htdocs\
-3. Crie o banco de dados no `phpMyAdmin` com o nome:montink
-4. ![image](https://github.com/user-attachments/assets/82ab39cb-12ce-421a-86a9-96bbbf8b5cfb)
+3. Crie o banco de dados no `phpMyAdmin` com o nome:  "montink"
+![image](https://github.com/user-attachments/assets/82ab39cb-12ce-421a-86a9-96bbbf8b5cfb)
 
        CREATE TABLE `cupons` (
           `id` int(11) NOT NULL AUTO_INCREMENT,
