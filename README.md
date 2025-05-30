@@ -1,6 +1,6 @@
 # Mini ERP Montink
 
-> Projeto de teste técnico com controle de pedidos, produtos, cupons e estoque. Desenvolvido com CodeIgniter, PHP e MySQL.
+> Teste rápido com controle de pedidos, produtos, cupons e estoque. Desenvolvido com CodeIgniter, PHP e MySQL.
 
 ## 📦 Tecnologias Utilizadas
 
