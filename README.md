@@ -27,8 +27,38 @@
 ![image](https://github.com/user-attachments/assets/75e38bb8-5a17-46f2-8871-52b2e6664a11)
 
 ## • Adicione uma verificação de CEP, utilizando o https://viacep.com.br/
-
-![image](https://github.com/user-attachments/assets/babd2f66-b113-42be-87b0-09a0737ea4e9)
+        <script>
+                $('#cepForm').on('submit', function(e) {
+                    e.preventDefault();
+                    const cep = $('#cep').val().replace(/\D/g, '');
+                
+                    $.post("<?= site_url('index.php/carrinho/verificar_cep') ?>", { cep }, function(data) {
+                        const info = JSON.parse(data);
+                        const cepResult = $('#cepResult');
+                
+                        if (info.erro) {
+                            cepResult.removeClass('d-none alert-success').addClass('alert-danger').text('CEP inválido!');
+                        } else {
+                            cepResult.removeClass('d-none alert-danger').addClass('alert-success')
+                                .html(`Endereço: ${info.logradouro}, ${info.bairro}, ${info.localidade} - ${info.uf}`);
+                        }
+                    });
+                });
+                
+                $('#finalizarPedidoForm').on('submit', function(e) {
+                    const cep = $('#cep').val();
+                    const enderecoTexto = $('#cepResult').text();
+                
+                    if (!cep || !enderecoTexto || enderecoTexto.includes('CEP inválido')) {
+                        alert('Por favor, verifique seu CEP antes de finalizar o pedido.');
+                        e.preventDefault();
+                        return false;
+                    }
+                
+                    $('#finalCep').val(cep);
+                    $('#finalEndereco').val(enderecoTexto);
+                });
+        </script>
 ![image](https://github.com/user-attachments/assets/0636b549-d14b-47a9-b9b9-684d9555bcc3)
 
 ## • ⁠Crie cupons que podem ser gerenciados por uma tela ou migração. Os cupons devem ter validade e regras de valores mínimos baseadas no subtotal do carrinho.
