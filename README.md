@@ -13,13 +13,19 @@
 - ViaCEP (API de verificação de CEP)
 - 
 ## • Crie um banco de dados com 4 tabelas: pedidos, produtos, cupons, estoque
-![image](https://github.com/user-attachments/assets/5d19ea1e-012c-47fc-8f1d-9c9ec59d972b)![image](https://github.com/user-attachments/assets/b05dc9db-c930-45f9-a0f7-10d3c5eb9a02)
+![image](https://github.com/user-attachments/assets/83cc2daa-cdc1-4ff2-8569-92af6e689c0e)![image](https://github.com/user-attachments/assets/0559b7c2-6cf5-4703-a307-8b519edb1ea9)
+
+
 
 ## • Crie uma tela simples, que permita a criação de produtos, com as seguintes informações: Nome, Preço, Variações e Estoque. O resultado do cadastro, deve gerar associações entre as tabelas produtos e estoques. Permitir o cadastro de variações, e o controle de seus estoques, é um bônus.
-![image](https://github.com/user-attachments/assets/a3d5879e-dda6-41d5-8543-addff885a354)![image](https://github.com/user-attachments/assets/e400f87d-01dc-4a7e-a454-6aa3ff24cb15)
+![image](https://github.com/user-attachments/assets/27f65d5e-2daa-4fa3-8a62-1423be555638)
+![image](https://github.com/user-attachments/assets/21d002ca-6250-4cdb-adf7-641c3ca7c73c)
+
+
 
 ## • Na mesma tela, permita a opção de update dos dados do produto e do estoque.
-![image](https://github.com/user-attachments/assets/abd7dfda-d5ac-4281-b4ce-d62e54df0cb2)
+![image](https://github.com/user-attachments/assets/f3a26c7a-9daf-4a0d-961b-1634412cbe2d)
+
 
 ## • Com o produto salvo, adicione na mesma tela um botão de Comprar. Ao clicar nesse botão, gerencie um carrinho em sessão, controlando o estoque e valores do pedido. Caso o subtotal do pedido tenha entre R$52,00 e R$166,59, o frete do pedido deve ser R$15,00. Caso o subtotal seja maior que R$200,00, frete grátis. Para outros valores, o frete deve custar R$20,00.
 
