@@ -36,7 +36,63 @@
 ![image](https://github.com/user-attachments/assets/50e3167a-24dc-4738-87ca-354fd3978cbc)
 
 ## • ⁠Adicione um script de envio de e-mail ao finalizar o pedido, com o endereço preenchido pelo cliente.
-![image](https://github.com/user-attachments/assets/142b89dc-2e0e-4964-85f0-449b39634dd7)
+        $config = [
+                   'protocol'    => 'smtp',
+                   'smtp_host'   => 'smtp-relay.brevo.com',
+                   'smtp_port'   => 587,
+                   'smtp_user'   => '8e4e07001@smtp-brevo.com',
+                   'smtp_pass'   => 'TNAhb8rPkxKEny2V',
+                   'smtp_crypto' => 'tls',
+                   'mailtype'    => 'html',
+                   'charset'     => 'utf-8',
+                   'newline'     => "\r\n",
+                   'crlf'        => "\r\n",
+            
+        ];
+
+        $this->email->initialize($config);
+        $this->email->from('cruzeirosouza3@gmail.com', 'Loja Exemplo');
+        $this->email->to($email);
+        $this->email->subject('Confirmação do pedido #' . $pedido_id);
+
+        $mensagem = "
+                <html>
+                <head>
+                    <meta charset='UTF-8'>
+                    <style>
+                        body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; color: #333; }
+                        .container { background-color: #ffffff; padding: 20px; border-radius: 8px; max-width: 600px; margin: auto; }
+                        .titulo { font-size: 20px; font-weight: bold; margin-bottom: 20px; color: #2c3e50; }
+                        .info { margin-bottom: 15px; }
+                        .label { font-weight: bold; color: #555; }
+                        .footer { margin-top: 30px; font-size: 14px; color: #777; text-align: center; }
+                    </style>
+                </head>
+                <body>
+                    <div class='container'>
+                        <div class='titulo'>Olá, {$nome}!</div>
+
+                        <p>Seu pedido foi <strong>recebido com sucesso</strong> e está sendo processado.</p>
+
+                        <div class='info'><span class='label'>Pedido nº:</span> {$pedido_id}</div>
+                        <div class='info'><span class='label'>Endereço:</span> {$endereco}</div>
+                        <div class='info'><span class='label'>CEP:</span> {$cep}</div>
+                        <div class='info'><span class='label'>Total:</span> R$ " . number_format($total, 2, ',', '.') . "</div>
+
+                        <p>Você receberá atualizações por e-mail à medida que o status do pedido mudar.</p>
+
+                        <div class='footer'>
+                            Obrigado pela sua preferência!<br>
+                            <strong>Equipe Montink</strong>
+                            
+                            
+                        </div>
+                    </div>
+                </body>
+                </html>
+                ";
+
+        $this->email->message($mensagem);
 ![image](https://github.com/user-attachments/assets/ba4abe85-c76c-498e-ae4d-2654cb25fe05)
 
 ## •⁠Crie um webhook que receberá o ID e o status do Pedido. Caso o status seja cancelado, remova o pedido. Caso o status seja outro, atualize o status em seu pedido.
