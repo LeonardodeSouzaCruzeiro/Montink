@@ -221,7 +221,9 @@
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; ` 
 
 
-       
+## • Crie o Admin 
+	INSERT INTO usuarios (nome, email, senha)
+	VALUES ('admin', 'admin@admin.com', MD5('admin'));       
 ## • Agora Acesse 
     http://localhost/montink/
   ![image](https://github.com/user-attachments/assets/e488d171-3129-494a-abb7-4874d7eef583)
