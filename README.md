@@ -150,7 +150,7 @@
 ## •⁠ 🚀 Como Rodar o Projeto
 
 1. Instale o [XAMPP](https://www.apachefriends.org/pt_br/index.html).
-2. Copie o projeto para: C:\xampp8\htdocs\
+2. Copie o projeto para: C:\xampp8\htdocs\montink
 3. Crie o banco de dados no `phpMyAdmin` com o nome:  "montink"
 ![image](https://github.com/user-attachments/assets/82ab39cb-12ce-421a-86a9-96bbbf8b5cfb)
 
